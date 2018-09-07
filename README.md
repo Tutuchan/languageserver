@@ -82,3 +82,9 @@ setHook(
 )
 ```
 Please note that this setting is ignored if a `.lintr` file is found.
+
+## Development
+
+To add a new functionality:
++ update `capabilities.R` with the new capability options if needed and uncomment the line in ServerCapabilities,
++ update the associated function in `handlers-langfeatures.R`,

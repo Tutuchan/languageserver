@@ -63,7 +63,7 @@ ServerCapabilities <- list(
     hoverProvider = TRUE,
     completionProvider = CompletionOptions,
     signatureHelpProvider = SignatureHelpOptions,
-    # definitionProvider = FALSE,
+    definitionProvider = TRUE,
     # referencesProvider = FALSE
     # documentHighlightProvider = FALSE,
     # documentSymbolProvider = FALSE,
