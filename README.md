@@ -48,7 +48,7 @@ let g:LanguageClient_serverCommands = {
 - [x] hoverProvider
 - [x] completionProvider
 - [x] signatureHelpProvider
-- [ ] definitionProvider
+- [x] definitionProvider
 - [ ] referencesProvider
 - [ ] documentHighlightProvider
 - [ ] documentSymbolProvider
@@ -88,3 +88,6 @@ Please note that this setting is ignored if a `.lintr` file is found.
 To add a new functionality:
 + update `capabilities.R` with the new capability options if needed and uncomment the line in ServerCapabilities,
 + update the associated function in `handlers-langfeatures.R`,
++ create or update the underlying code,
++ reinstall the package with `devtools::install()`, run the server in debug mode in a separate terminal window,
++ reload the VSCode window (`Cmd+Shift+P` on Mac OS) and check the messages in the server + the behaviour in VSCode.
