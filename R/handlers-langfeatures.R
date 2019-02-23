@@ -37,6 +37,16 @@ text_document_definition  <- function(self, id, params) {
 }
 
 # Request
+text_document_type_definition  <- function(self, id, params) {
+
+}
+
+# Request
+text_document_implementation  <- function(self, id, params) {
+
+}
+
+# Request
 text_document_references  <- function(self, id, params) {
 
 }
@@ -77,6 +87,17 @@ document_link_resolve  <- function(self, id, params) {
 }
 
 # Request
+text_document_document_color  <- function(self, id, params) {
+
+}
+
+# Request
+text_document_color_presentation  <- function(self, id, params) {
+
+}
+
+
+# Request
 text_document_formatting  <- function(self, id, params) {
     textDocument <- params$textDocument
     uri <- textDocument$uri
@@ -100,5 +121,15 @@ text_document_on_type_formatting  <- function(self, id, params) {
 
 # Request
 text_document_rename  <- function(self, id, params) {
+
+}
+
+# Request
+text_document_prepare_rename  <- function(self, id, params) {
+
+}
+
+# Request
+text_document_folding_range  <- function(self, id, params) {
 
 }
