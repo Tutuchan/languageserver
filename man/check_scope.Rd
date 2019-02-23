@@ -7,7 +7,7 @@
 check_scope(uri, document, position)
 }
 \arguments{
-\item{uri}{a character, the path to a file}
+\item{uri}{a character, the path to a file as defined by \href{https://tools.ietf.org/html/rfc3986}{RFC 3986}}
 
 \item{document}{a character, the contents of the document}
 
@@ -19,6 +19,5 @@ a logical
 \description{
 In an RMarkdown document, tokens can be either inside an R code block or
 in the text. This function will return \code{FALSE} if the token is in the text
-and \code{TRUE} if it is in a code block. For R scripts, it will always return
-\code{TRUE}.
+and \code{TRUE} if it is in a code block. For R scripts, it always returns \code{TRUE}.
 }

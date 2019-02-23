@@ -2,18 +2,15 @@
 % Please edit documentation in R/completion.R
 \name{completion_reply}
 \alias{completion_reply}
-\title{the response to a completion request}
+\title{the response to a textDocument/completion request}
 \usage{
 completion_reply(id, uri, workspace, document, position)
 }
-\arguments{
-\item{id}{a character, the id of the request,}
-
-\item{workspace}{a \link{Workspace} object, the current workspace}
-}
 \value{
+a \link{Response} object
+
 a \link{Response} object
 }
 \description{
-the response to a completion request
+the response to a textDocument/completion request
 }

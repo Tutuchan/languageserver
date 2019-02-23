@@ -76,12 +76,11 @@ arg_completion <- function(workspace, token, closure) {
 workspace_completion <- function(workspace, full_token) {
     completions <- list()
 
-    matches <- stringr::str_match(
-        full_token, "(?:([a-zA-Z][a-zA-Z0-9.]+)(:::?))?([a-zA-Z0-9_.]*)$")
+    matches <- detect_function(full_token)
 
-    pkg <- matches[2]
-    exported_only <- matches[3] == "::"
-    token <- matches[4]
+    pkg <- matches$package
+    exported_only <- matches$accessor == "::"
+    token <- matches$funct
 
     if (is.na(pkg)) {
         packages <- workspace$loaded_packages
@@ -126,9 +125,11 @@ workspace_completion <- function(workspace, full_token) {
     completions
 }
 
-#' the response to a completion request
+#' the response to a textDocument/completion request
 #'
 #' @template reply-parameters
+#'
+#' @return a [Response] object
 completion_reply <- function(id, uri, workspace, document, position) {
 
     if (!check_scope(uri, document, position)) {
